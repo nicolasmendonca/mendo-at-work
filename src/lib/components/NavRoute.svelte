@@ -1,10 +1,8 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import type { RouteType } from '../constants';
 
 	export let href: RouteType;
-
-	$: isActiveRoute = $page.url.pathname.split('/').at(1) === href.split('/').at(1);
+	export let isActiveRoute: boolean;
 </script>
 
 <a

@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
 	import '../app.postcss';
 	import NavRoute from '../lib/components/NavRoute.svelte';
+	import { page } from '$app/stores';
 </script>
 
 <div class="sticky top-0">
@@ -11,9 +12,9 @@
 				>Mars Software <span class="block">Solutions LLC</span></a
 			>
 		</div>
-		<div class="flex justify-center gap-8 rounded-full border border-neutral-700 w-fit mx-auto p-2">
-			<NavRoute href="/">Home</NavRoute>
-			<NavRoute href="/blog">Blog</NavRoute>
+		<div class="flex justify-center gap-8 rounded-full border border-neutral-700 bg-black w-fit mx-auto p-2">
+			<NavRoute href="/" isActiveRoute={$page.url.pathname === '/'}>Home</NavRoute>
+			<NavRoute href="/blog" isActiveRoute={$page.url.pathname.startsWith('/blog')}>Blog</NavRoute>
 		</div>
 		<div class="w-4" />
 	</nav>
