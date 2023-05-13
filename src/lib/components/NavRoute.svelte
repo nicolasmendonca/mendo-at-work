@@ -4,7 +4,7 @@
 
 	export let href: RouteType;
 
-	$: isActiveRoute = $page.url.pathname === href;
+	$: isActiveRoute = $page.url.pathname.split('/').at(1) === href.split('/').at(1);
 </script>
 
 <a

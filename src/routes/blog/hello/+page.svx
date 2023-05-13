@@ -1,0 +1,23 @@
+---
+title: 'Hello from post'
+tags: ['hello', 'world']
+date: '2020/01/01'
+layout: blog-post
+---
+  
+# {title}
+
+## Subtitle
+
+{ new Date(date).toLocaleDateString() }
+
+**This** is what the _content_ looks like.
+
+> We also have quotes
+
+```ts
+export function hola() {
+  throw new Error();
+}
+```
+
